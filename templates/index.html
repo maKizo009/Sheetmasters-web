@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="import" href="_init_.py">
+    <title>SheetMasters Web</title>
+</head>
+<body
+class="h-screen w-screen bg-cover bg-center bg-no-repeat grid items-center justify-start"
+    style="background-image: linear-gradient(to bottom, rgb(0, 63, 198), rgb(160, 159, 159) )";
+>
+    <div
+    class="flex items-center justify-center"
+    >
+        <h1
+        class="text-4xl font-extrabold text-gray-700"
+        >Escolha seu arquivo csv
+        </h1>
+    </div>
+    <p>Nota: O arquivo precisa ser em formato csv e separado por ponto, não vítgula.</p>
+    <div>
+        <form
+        class="flex items-center justify-center"
+        action="/sheetProcess" method="post" enctype="multipart/form-data">
+            <input type="file" name="">
+            <input type="submit" value="upload">
+
+            <button
+            action="/sheetProcess"
+            onclick=""
+            type="submit" href:"/sheetProcess"
+            ></button>
+        </form>
+    </div>
+    
+</body>
+</html>
+

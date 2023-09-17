@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body
+class="h-screen w-screen bg-cover bg-center bg-no-repeat grid items-center justify-start"
+>
+    <script>
+        function checkProcessingStatus() {
+            fetch('/status')
+            .then(response => response.json())
+            .then(data => {
+
+                if(data.status==='completed') {
+
+                    document.getElementById("download-button").disabled=false;
+                }
+            });
+
+        }
+
+        setInterval(checkProcessingStatus, 5000);
+    </script>
+    <div>
+        <h1>Aguarde até a planilha ficar pronta</h1>
+
+        <form action="/download" method="get">
+            <button
+            
+            type="submit">Baixar planilha</button>
+        </form>
+        
+    </div>
+    
+</body>
+</html>
